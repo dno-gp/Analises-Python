@@ -12,8 +12,9 @@ except:
 
 try:
     with link.cursor() as c:
-	#Executando a consulta
-        sql = "SELECT SUM(gastoR$) FROM servidores WHERE municipio = %s AND unor = %s AND ano = %s GROUP BY mes"
+        sql = "SELECT SUM(gastoR$) FROM servidores WHERE municipio = %s \
+               AND unor = %s AND ano = %s GROUP BY mes"
+	
         c.execute(sql, (1,'pm',2013))
         x = c.fetchall()
         mes = np.arange(len(x))
@@ -27,7 +28,6 @@ try:
         plt.show()
 except:
         print("Erro na execução da consulta")
-
-
+	
 finally:
     link.close() #Encerrando a conexão com o banco de dados
