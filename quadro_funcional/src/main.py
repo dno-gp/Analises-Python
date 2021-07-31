@@ -34,9 +34,17 @@ class Relatorio:
         for i in resultset:
             contratado.append(i)
 
-        print("Quantidade de servidores/2021")
-        print("\tJan\tFev\tMar\tAbr\tMai")
-        print("Efetivos: ", str(efetivo[0])+'\t'+str(efetivo[1])+'\t'+str(efetivo[2])+'\t'+str(efetivo[3])+'\t'+str(efetivo[4]))
-        print('Comissionados: ', comissionado)
-        print('Contratados: ', contratado)
+        # Exibindo os resultados:
+        print(65*"-")
+        print(f"{'Quantidade de servidores-Sapé/PB/2021':^65}")
+        print(65*"-")
+        print(f"{'Jan':>20}{'Fev':>9}{'Mar':>8}{'Abr':>8}{'Mai':>8}")
+        print(f"{'Efetivos:':>15}", str(efetivo[0])+'\t'+str(efetivo[1])+'\t'+str(efetivo[2])+'\t'+str(efetivo[3])+'\t'+str(efetivo[4]))
+        print(f"{'Comissionados:':>15}", comissionado)
+        print(f"{'Contratados:':>15}", contratado)
+        print(65*"-")
+        
+if __name__=='__main__':
+    a = Relatorio()
+    a.geral()
 
