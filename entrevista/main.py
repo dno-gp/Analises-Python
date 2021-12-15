@@ -1,29 +1,48 @@
-# main.py - Estrutura de funcionamento do programa.
+# main.py - Estrutura de funcionamento do programa Entrevistac.
 
-class Entrevista:
-    respostas = []
-    continuar = "s"
+class Entrevista(object):
+    global respostas; respostas = []
 
-    def salva_resposta(*args):
-        respostas.append((*args))
-
+    def salva_resposta(tuple):
+        respostas.append((tuple))
 
     def perguntas():
-        while continuar == "s":
+        continuar = 's'
+
+        print(f"{10*'#'} Questionário iniciado! {10* '#'}\n")
+        while continuar == 's':
             
-            #sexo
+        #Questão gênero
             sexo = input("Informe o sexo/gênero: ").lower()
-            if sexo != "m":
-                print("Resposta inválida.")
-                #idade
-            idade = input("Informe a idade: ")
+            if sexo not in ('m', 'f', 'o'):
+                print("Resposta inválida. Tente Novamente.")
+                Entrevista.perguntas()
 
-                #se interessa por política?
+        #Questão idade
+            try:
+                idade = int(input('Informe a idade: '))
+                if idade not in range(16,100):
+                    print('Idade fora do intervalo do público alvo. Dirija-se\
+ para a próxima entrevista.')
+                    break
+            except:
+                print('Resposta inválida.')
+
+         #Questão interesse por política
             interesse = input("Se interessa por política?(0-não se interessa,\
-                                        1-pouco, 2-se interessa, 3-muito)")
+1-pouco, 2-se interessa, 3-muito)")
+            if interesse not in (0, 1, 2, 3):
+                print('Resposta fora de intervalo.')
 
-                #votou nas últimas eleições?
+        #Questão comparecimento
             votou = input("Votou nas últimas eleições? ")
+            if votou not in ('s', 'n', 'o'):
+                print('Resposta inválida.')
+
+            continuar = input("Continuar?(Digite 'S' para prosseguir ou \
+qualquer tecla para sair.)").lower()
+
+
 
 """  try:
         salva_resposta((sexo, idade, interesse, votou))
@@ -39,3 +58,5 @@ print(f"Total de entrevistados: {len(respostas)}")"""
 #Armazenar respostas em uma lista
 #Armazer lista em arquivo
 #Estatistica
+if __name__=="__main__":
+    Entrevista.perguntas()
