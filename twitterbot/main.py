@@ -33,7 +33,7 @@ class Bot:
         driver.close()
 
 if __name__=='__main__':
-    bot = Bot('Dinho__o', 'hexum0eds!')
+    bot = Bot('login','senha')
     bot.entrar()
     bot.sair()
 
