@@ -61,7 +61,7 @@ class Bot:
         driver.close()
 
 if __name__=='__main__':
-    bot = Bot(os.environ.get('LOGIN_TW'), os.environ.get('PSW_TW'))
+    bot = Bot('login','senha')
     bot.entrar()
     bot.sair()
 

@@ -981,3 +981,11 @@ JavaScript warning: https://pagead2.googlesyndication.com/bg/RSjKnk5gG5e-Ynqyaok
 
 ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1642604422632	Marionette	INFO	Stopped listening on port 37855
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
