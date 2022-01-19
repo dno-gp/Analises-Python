@@ -9,8 +9,8 @@ class Bots1():
     def __init__(self, login, passwd):
         self.login = login
         self.passwd = passwd
-        
-        self.driver = webdriver.Firefox()
+        ff = "/usr/local/bin/geckodriver"
+        self.driver = webdriver.Firefox(executable_path=ff)
 
     def acessar(self):      
         driver = self.driver
