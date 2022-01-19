@@ -47,7 +47,9 @@ class Bot:
 
         elem_psw.send_keys(Keys.RETURN)
 
-
+    def twitter(self, tw):
+        self.tw = tw
+        pass
 
     def comentar(self, comentario):
         self.comentario = comentario
