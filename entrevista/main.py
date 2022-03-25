@@ -1,9 +1,10 @@
 # main.py - Estrutura de funcionamento do programa Entrevistac.
 # autor:    Edson Sales<sales_eds@hotmail.com>
+# Data:     janeiro/2022
 #-----------------------------------------------------------------------------
 class Entrevista():
     def __init__(self):
-        self.data = []
+        self.data = [] #Lista para registrar as respostas obtidas.
 
     def perguntas(self):
         continuar = "s"
@@ -25,7 +26,7 @@ class Entrevista():
                 print("Encerrando entrevista.")
 
     def respostas(self):
-        print(self.data)
+        print(self.data) # Exibe o contúdo da lista data.
 
     def arquivar(self):
         pass
